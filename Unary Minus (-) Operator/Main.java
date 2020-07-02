@@ -1,0 +1,38 @@
+/*C++ program for unary minus (-) operator overloading.*/
+
+#include<iostream>
+using namespace std;
+ 
+class NUM
+{
+    private:
+        int n;
+         
+    public:
+        //function to get number
+        void getNum()
+        {
+            cin>>n;
+        }
+        //function to display number
+        void dispNum(void)
+        {
+            cout << "value of n is: " << n;
+        }
+        //unary - operator overloading
+        void operator - (void)
+        {
+            n=-n;
+        }
+};
+
+int main()
+{
+    NUM num;
+    num.getNum();
+    -num;
+    num.dispNum();
+    cout << endl;
+    return 0;
+     
+}
